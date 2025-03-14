@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Streaming Website</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/loaders/loader.css" rel="stylesheet">
+    <link href="css/custom-scrollbar.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+    <div class="loader">
+        <div class="loader__content">
+            <div class="loader__box"></div>
+            <div class="loader__shadow"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 aside">
+            <div class="text-brand"><i class="fas fa-spider"></i><span> Raman</span>Vision</div>
+            <div class="text">
+                <ul>
+                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="#"><i class="fa fa-compass" aria-hidden="true"></i> Explore</a></li>
+                    <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Favourites</a></li>
+                </ul>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="text">
+                <ul>
+                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+                </ul>
+            </div>
+            <div class="continue">
+                <h5>Continue Watching</h5>
+                <ul class="continue-list">
+                    <li>
+                        <img src="./images/your name.jpg" alt="Chernobyl">
+                        <div class="continue-info">
+                            <p>Your Name</p>
+                            <p>Episode 3</p>
+                        </div>
+                        <i class="fa fa-play-circle"></i>
+                    </li>
+                    <li>
+                        <img src="./images/weatherring with you.jpg" alt="Snowpiercer">
+                        <div class="continue-info">
+                            <p>Tom and Jerry</p>
+                            <p>Episode 7</p>
+                        </div>
+                        <i class="fa fa-play-circle"></i>
+                    </li>
+                    <li>
+                        <img src="./images/suzume.jpg" alt="The Platform">
+                        <div class="continue-info">
+                            <p>Suzume</p>
+                            <p>55min 12sec</p>
+                        </div>
+                        <i class="fa fa-play-circle"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-9 main-content d-flex flex-column">
+            <div class="row justify-content-center mb-3">
+                <div class="col-5 d-flex">
+                    <input type="search" id="searchInput" class="search" placeholder="Search">
+                    <button id="searchButton" class="btn all ml-2">Search</button>
+                </div>
+            </div>
+            <div class="featured mb-3 position-relative">
+
+                <img src="./images/yn.jpg" alt="Featured Movie" class="featured-image">
+                <div class="featured-info position-absolute text-white p-3">
+                    <h4 class="col-3">💥 New Popular</h4>
+                    <h1>Suzume</h1>
+                    <p>Drama, Fantasy</p>
+                    <p>The already tumultuous and difficult lives of people in the Ukrainian countryside are turned
+                        upside down by war, revolution, and a new government.</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn all" data-toggle="modal" data-target="#exampleModal">
+                        Watch Now
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Watching Suzume</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <video src="./Videos/Suzume(2022) WEBDL-1080p.mp4" controls
+                                        style="width: 100%; height: auto;"></video>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn all" data-dismiss="modal">Close</button>
+                                    <button type="button"><a class="all"
+                                            href="./Videos/Suzume(2022) WEBDL-1080p.mp4">Download</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestions">
+                <h3>You might like</h3>
+                <div class="suggestions-list">
+                    <div class="suggestion-item">
+                        <img src="./images/poo.jpg" alt="Joker">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn all" data-toggle="modal" data-target="#kungFuPandaModal">
+                            Kung Fu Panda
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="kungFuPandaModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Watching Kung fu Panda</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video
+                                            src="./Videos/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG.mp4"
+                                            controls style="width: 100%; height: auto;"></video>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn all" data-dismiss="modal">Close</button>
+                                        <button type="button"><a class="all"
+                                                href="./Videos/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG.mp4">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="./images/tom-and-jerry.jpg" alt="Tom and Jerry">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn all" data-toggle="modal" data-target="#tomAndJerryModal">
+                            Tom and Jerry
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="tomAndJerryModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Watching Tom and Jerry</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video src="./Videos/Tom and Jerry Meet Sherlock Holmes (2010)Bluray-1080p.mp4" controls
+                                            style="width: 100%; height: auto;"></video>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn all" data-dismiss="modal">Close</button>
+                                        <button type="button"><a class="all"
+                                                href="./Videos/Tom and Jerry Meet Sherlock Holmes (2010)Bluray-1080p.mp4">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="./images/your name.jpg" alt="Your Name">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn all" data-toggle="modal" data-target="#yourNameModal">
+                            Your Name
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="yourNameModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Watching Your Name</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video
+                                            src="./Videos/Weathering.with.You.2020.V2.REPACK.BDRip.XviD.AC3-EVO/[TorrentCounter.to].Your.Name.2016.English.Dubbed.[Kimi.no.Na.wa].1080p.BluRay.x264.[1.5GB].mp4"
+                                            controls style="width: 100%; height: auto;"></video>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn all" data-dismiss="modal">Close</button>
+                                        <button type="button"><a class="all"
+                                                href="./Videos/Weathering.with.You.2020.V2.REPACK.BDRip.XviD.AC3-EVO/[TorrentCounter.to].Your.Name.2016.English.Dubbed.[Kimi.no.Na.wa].1080p.BluRay.x264.[1.5GB].mp4">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
