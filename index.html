@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Streaming Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RamanVision</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -15,6 +15,28 @@
 </head>
 
 <body class="container-fluid">
+    <!-- Add a navbar for smaller screens -->
+    <nav class="navbar navbar-expand-lg navbar-light d-lg-none">
+        <a class="navbar-brand" href="#"><i class="fas fa-spider"></i> RamanVision</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-compass" aria-hidden="true"></i>
+                        Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="./html/explore.html"><i class="fa fa-heart" aria-hidden="true"></i>
+                        Favourites</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                        Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-cog" aria-hidden="true"></i>
+                        Settings</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="loader">
         <div class="loader__content">
             <div class="loader__box"></div>
@@ -22,12 +44,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-2 aside">
+        <div class="col-2 aside d-none d-lg-block">
             <div class="text-brand"><i class="fas fa-spider"></i><span> Raman</span>Vision</div>
             <div class="text">
                 <ul>
-                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                    <li><a href="#"><i class="fa fa-compass" aria-hidden="true"></i> Explore</a></li>
+                    <li><a href="./index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="./html/explore.html"><i class="fa fa-compass" aria-hidden="true"></i> Explore</a></li>
                     <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Favourites</a></li>
                 </ul>
             </div>
@@ -39,50 +61,26 @@
                 </ul>
             </div>
             <div class="continue">
-                <h5>Continue Watching</h5>
-                <ul class="continue-list">
-                    <li>
-                        <img src="./images/your name.jpg" alt="Chernobyl">
-                        <div class="continue-info">
-                            <p>Your Name</p>
-                            <p>Episode 3</p>
-                        </div>
-                        <i class="fa fa-play-circle"></i>
-                    </li>
-                    <li>
-                        <img src="./images/weatherring with you.jpg" alt="Snowpiercer">
-                        <div class="continue-info">
-                            <p>Tom and Jerry</p>
-                            <p>Episode 7</p>
-                        </div>
-                        <i class="fa fa-play-circle"></i>
-                    </li>
-                    <li>
-                        <img src="./images/suzume.jpg" alt="The Platform">
-                        <div class="continue-info">
-                            <p>Suzume</p>
-                            <p>55min 12sec</p>
-                        </div>
-                        <i class="fa fa-play-circle"></i>
-                    </li>
+                <h5 class="h5-responsive">Continue Watching</h5>
+                <ul class="continue-list" id="continueList">
+
                 </ul>
             </div>
         </div>
-        <div class="col-9 main-content d-flex flex-column">
+        <div class="col-lg-9 col-12 main-content d-flex flex-column">
             <div class="row justify-content-center mb-3">
-                <div class="col-5 d-flex">
+                <div class="col-12 d-flex">
                     <input type="search" id="searchInput" class="search" placeholder="Search">
-                    <button id="searchButton" class="btn all ml-2">Search</button>
+                    <button style="background-color: #3d3d3d;" id="searchButton" class="btn all ml-2">Search</button>
                 </div>
             </div>
             <div class="featured mb-3 position-relative">
-
-                <img src="./images/yn.jpg" alt="Featured Movie" class="featured-image">
+                <img src="./images/yn.jpg" loading="lazy" alt="Featured Movie" class="featured-image">
                 <div class="featured-info position-absolute text-white p-3">
-                    <h4 class="col-3">💥 New Popular</h4>
-                    <h1>Suzume</h1>
-                    <p>Drama, Fantasy</p>
-                    <p>The already tumultuous and difficult lives of people in the Ukrainian countryside are turned
+                    <h4 class="h4-responsive">💥 New Popular</h4>
+                    <h1 class="h1-responsive">Suzume</h1>
+                    <p class="p-responsive">Drama, Fantasy</p>
+                    <p class="p-responsive">The already tumultuous and difficult lives of people in the Ukrainian countryside are turned
                         upside down by war, revolution, and a new government.</p>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn all" data-toggle="modal" data-target="#exampleModal">
@@ -95,117 +93,132 @@
                         <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Watching Suzume</h5>
+                                    <h5 class="modal-title h5-responsive" id="exampleModalLabel">Watching Suzume</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <video src="./Videos/Suzume(2022) WEBDL-1080p.mp4" controls
-                                        style="width: 100%; height: auto;"></video>
+                                    <video
+                                        src="http://funday.pk/Items/62878031dcc6ae17e98492dc7f161f5a/Download?api_key=a7891f9833744d5e9c18eb32579edf78"
+                                        controls style="width: 100%; height: auto;"></video>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn all" data-dismiss="modal">Close</button>
                                     <button type="button"><a class="all"
-                                            href="./Videos/Suzume(2022) WEBDL-1080p.mp4">Download</a></button>
+                                            href="http://funday.pk/Items/62878031dcc6ae17e98492dc7f161f5a/Download?api_key=a7891f9833744d5e9c18eb32579edf78">Download</a></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="suggestions">
-                <h3>You might like</h3>
-                <div class="suggestions-list">
-                    <div class="suggestion-item">
-                        <img src="./images/poo.jpg" alt="Joker">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn all" data-toggle="modal" data-target="#kungFuPandaModal">
-                            Kung Fu Panda
-                        </button>
-
+            <div class="suggestions col-12">
+                <h3 class="h3-responsive">You might like</h3>
+                <div class="suggestions-list row">
+                    <div class="suggestion-item col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./images/default.jpg" loading="lazy" class="card-img-top" alt="Kung Fu Panda">
+                            <div class="card-body">
+                                <h5 class="card-title">Kung Fu Panda</h5>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn all" data-toggle="modal" data-target="#defaultModal">
+                                    Watch Now
+                                </button>
+                            </div>
+                        </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="kungFuPandaModal" tabindex="-1" role="dialog"
+                        <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Watching Kung fu Panda</h5>
+                                        <h5 class="modal-title h5-responsive" id="exampleModalLabel">Watching Kung fu Panda</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
                                         <video
-                                            src="./Videos/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG.mp4"
+                                            src="http://funday.pk/Items/0478b5c1a04dd69507114ad8b349c846/Download?api_key=a7891f9833744d5e9c18eb32579edf78"
                                             controls style="width: 100%; height: auto;"></video>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn all" data-dismiss="modal">Close</button>
                                         <button type="button"><a class="all"
-                                                href="./Videos/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG/Kung.Fu.Panda.2.2011.1080p.BluRay.H264.AAC-RARBG.mp4">Download</a></button>
+                                                href="http://funday.pk/Items/0478b5c1a04dd69507114ad8b349c846/Download?api_key=a7891f9833744d5e9c18eb32579edf78">Download</a></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="suggestion-item">
-                        <img src="./images/tom-and-jerry.jpg" alt="Tom and Jerry">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn all" data-toggle="modal" data-target="#tomAndJerryModal">
-                            Tom and Jerry
-                        </button>
+                    <div class="suggestion-item col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./images/tom-and-jerry.jpg" loading="lazy" class="card-img-top" alt="Tom and Jerry">
+                            <div class="card-body">
+                                <h5 class="card-title">Tom and Jerry</h5>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn all" data-toggle="modal" data-target="#tomAndJerryModal">
+                                    Watch Now
+                                </button>
+                            </div>
+                        </div>
                         <!-- Modal -->
                         <div class="modal fade" id="tomAndJerryModal" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Watching Tom and Jerry</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <video src="./Videos/Tom and Jerry Meet Sherlock Holmes (2010)Bluray-1080p.mp4" controls
-                                            style="width: 100%; height: auto;"></video>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn all" data-dismiss="modal">Close</button>
-                                        <button type="button"><a class="all"
-                                                href="./Videos/Tom and Jerry Meet Sherlock Holmes (2010)Bluray-1080p.mp4">Download</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="suggestion-item">
-                        <img src="./images/your name.jpg" alt="Your Name">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn all" data-toggle="modal" data-target="#yourNameModal">
-                            Your Name
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="yourNameModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Watching Your Name</h5>
+                                        <h5 class="modal-title h5-responsive" id="exampleModalLabel">Watching Tom and Jerry</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
                                         <video
-                                            src="./Videos/Weathering.with.You.2020.V2.REPACK.BDRip.XviD.AC3-EVO/[TorrentCounter.to].Your.Name.2016.English.Dubbed.[Kimi.no.Na.wa].1080p.BluRay.x264.[1.5GB].mp4"
+                                            src="http://funday.pk/Items/891eae2bf5b4c385dfce1f202206aa1b/Download?api_key=a7891f9833744d5e9c18eb32579edf78"
                                             controls style="width: 100%; height: auto;"></video>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn all" data-dismiss="modal">Close</button>
                                         <button type="button"><a class="all"
-                                                href="./Videos/Weathering.with.You.2020.V2.REPACK.BDRip.XviD.AC3-EVO/[TorrentCounter.to].Your.Name.2016.English.Dubbed.[Kimi.no.Na.wa].1080p.BluRay.x264.[1.5GB].mp4">Download</a></button>
+                                                href="http://funday.pk/Items/891eae2bf5b4c385dfce1f202206aa1b/Download?api_key=a7891f9833744d5e9c18eb32579edf78">Download</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suggestion-item col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="./images/Scooby-doo.jpg" loading="lazy" class="card-img-top" alt="Scooby-doo">
+                            <div class="card-body">
+                                <h5 class="card-title">Scooby-doo</h5>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn all" data-toggle="modal" data-target="#yourNameModal">
+                                    Watch Now
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="yourNameModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title h5-responsive" id="exampleModalLabel">Watching Scooby-doo</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video
+                                            src="http://funday.pk/Items/d5aa414672f6fe906661e8f18efef9e1/Download?api_key=a7891f9833744d5e9c18eb32579edf78"
+                                            controls style="width: 100%; height: auto;"></video>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn all" data-dismiss="modal">Close</button>
+                                        <button type="button"><a class="all"
+                                                href="http://funday.pk/Items/d5aa414672f6fe906661e8f18efef9e1/Download?api_key=a7891f9833744d5e9c18eb32579edf78">Download</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -220,6 +233,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./script.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>

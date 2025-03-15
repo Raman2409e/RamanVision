@@ -23,22 +23,23 @@ body {
     top: 0;
     margin-left: 4%;
     height: 89vh; /* Full viewport height */
-    overflow-y: auto; /* Allows scrolling if content overflows */
+    overflow-y: hidden; /* Allows scrolling if content overflows */
     width: 16.66%; 
 }
 
 .text-brand i {
-    color: var(--text-hover);
-    text-shadow: 0 0 10px var(--text-hover);
+    color: black;
+    font-size: 1.5rem; /* Adjusted font size */
 }
 
 .text-brand span {
     font-weight: bold;
+    font-size: 1.5rem; /* Adjusted font size */
 }
 
 .text-brand {
     padding: 25px;
-    font-size: 30px;
+    font-size: 1.2rem; /* Adjusted font size */
 }
 
 .text {
@@ -57,7 +58,7 @@ body {
 
 .text ul li a {
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjusted font size */
     text-decoration: none;
     transition: 0.5s;
 }
@@ -71,7 +72,7 @@ body {
 }
 
 .continue h5 {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjusted font size */
     margin-bottom: 10px;
 }
 
@@ -100,6 +101,7 @@ body {
 
 .continue-info p {
     margin: 0;
+    font-size: 1rem; /* Adjusted font size */
 }
 
 .fa-play-circle {
@@ -122,7 +124,8 @@ body {
     color: var(--text-color);
     border-radius: 20px;
     padding: 10px 35px;
-    background-color: var(--background);
+    background-color: var(--bg-color);
+    transition: 0.5s;
 }
 .all:hover{
     color: var(--text-hover);
@@ -180,11 +183,46 @@ body {
 .featured-info h4{
     width: 19%;
     opacity: 0.7;
-    background-color: #00000065;
+    background-color: #000000be;
     color: var(--text-color);
     padding: 5px 10px;
     border-radius: 20px;
     bottom: 600px;
+}
+@media (max-width: 1024px) {
+    .featured-info h4 ,.featured-info p {
+        width: auto;
+        font-size: 1rem; /* Adjusted font size */
+    }
+    .featured-info h1{
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .aside{
+        padding: 8px;
+    }
+
+}
+@media (max-width: 768px) {
+    .featured-info h4 ,.featured-info h1 {
+        
+        font-size: 1.2rem; /* Adjusted font size */
+    }
+    .featured-info p {
+        display: none;
+    }
+    .featured-image {
+        height: 400px;
+        object-fit: cover;
+    }
+}
+@media (max-width: 1470px) {
+    .text-brand,.text ul li a{
+        font-size: 1rem; /* Adjusted font size */
+    }
+    .continue-info p{
+        display: none;
+    }
 }
 .featured-info {
     position: absolute;
@@ -205,4 +243,84 @@ body {
 video{
     border-radius: 20px;
     box-shadow: 0 0 15px black;
+}
+
+/* Hide aside on smaller screens */
+@media (max-width: 991.98px) {
+    .aside {
+        display: none;
+    }
+}
+
+/* Adjust main content width on smaller screens */
+@media (max-width: 991.98px) {
+    .main-content {
+        width: 100%;
+        
+    }
+}
+
+/* Show aside as a sidebar on medium screens */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .aside {
+        width: 20%;
+    }
+}
+
+/* Show aside as a sidebar on large screens */
+@media (min-width: 1200px) {
+    .aside {
+        width: 16.66%;
+    }
+}
+
+nav{
+    border-radius: 40px;
+    margin: 20px;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+.navbar-brand i{
+    color: var(--text-color);
+    transition: 0.5s;
+}
+.navbar-nav .nav-link i {
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.navbar-nav .nav-link i:hover {
+    color: var(--text-hover);
+}
+.navbar-toggler{
+    color: var(--text-color);
+    border: none;
+}
+
+
+
+/* Card styles for suggestions */
+.card {
+    background-color: var(--background);
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.card:hover{
+    opacity: 0.8;
 }
