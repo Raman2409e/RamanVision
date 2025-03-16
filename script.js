@@ -67,7 +67,7 @@ $('.modal').on('hidden.bs.modal', function () {
 function getDefaultImage(title) {
     var images = {
         'Scooby-doo': '../images/Scooby-doo.jpg',
-        'Tom and Jerry': '../images/tom-and-jerry.jpg',
+        'Tom and Jerry': '../images/tom-and-jerry.png',
         'Suzume': '../images/suzume.jpg',
         'Kung fu Panda': '../images/default.jpg',
         'Avengers Endgame': '../images/Avengers Endgame.jpg',

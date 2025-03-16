@@ -10,9 +10,11 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 20px;
+    
+}
+.row{
     animation: fadeIn 1s ease-in-out;
 }
-
 
 .aside {
     background-color: var(--background);
@@ -145,12 +147,23 @@ nav {
     padding: 10px 35px;
     background-color: var(--bg-color);
     transition: 0.5s;
+    text-decoration: none; /* Ensure no underline */
 }
 
 .all:hover {
     color: var(--text-hover);
-
     animation: glow 1s infinite alternate;
+}
+
+/* Ensure the download button has no white background */
+.all a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+    background-color: transparent; /* Remove background */
+}
+
+.all a:hover {
+    color: var(--text-hover);
 }
 
 .search {
@@ -375,8 +388,8 @@ nav {
 
 .card:hover {
     opacity: 0.8;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes pulse {
@@ -453,3 +466,4 @@ nav {
         opacity: 1;
     }
 }
+
