@@ -31,6 +31,8 @@ $('.modal').on('hidden.bs.modal', function () {
 
         if ($continueItem.length) {
             $continueItem.find('.continue-info p:nth-child(2)').text(timeString);
+            // Move the item to the top
+            $continueItem.prependTo('.continue-list');
         } else {
             var movieTitle = $(this).find('.modal-title').text().replace('Watching ', '');
             var movieImage = getDefaultImage(movieTitle); // Use a default image if poster is not available
@@ -43,7 +45,7 @@ $('.modal').on('hidden.bs.modal', function () {
                     </div>
                     <i class="fa fa-play-circle" data-target="#${modalId}"></i>
                 </li>
-            `; 
+            `;
             $('.continue-list').prepend(newItem);
 
             // Ensure only the latest three items are shown
@@ -64,12 +66,12 @@ $('.modal').on('hidden.bs.modal', function () {
 // Function to get default image based on movie title
 function getDefaultImage(title) {
     var images = {
-        'Scooby-doo': './images/Scooby-doo.jpg',
-        'Tom and Jerry': './images/tom-and-jerry.jpg',
-        'Suzume': './images/suzume.jpg',
-        // Correct image for Kung Fu Panda
-        'Kung fu Panda':'./images/default.jpg'
-        
+        'Scooby-doo': '../images/Scooby-doo.jpg',
+        'Tom and Jerry': '../images/tom-and-jerry.jpg',
+        'Suzume': '../images/suzume.jpg',
+        'Kung fu Panda': '../images/default.jpg',
+        'Avengers Endgame': '../images/Avengers Endgame.jpg',
+        'Dragon ball Super hero': '../images/new-movie.jpg' // Added Dragon Ball Super Hero
     };
     return images[title] || './images/default.jpg';
 }
@@ -82,7 +84,8 @@ $('#searchButton').on('click', function () {
         'tom and jerry': '#tomAndJerryModal',
         'suzume': '#exampleModal',
         'kung fu panda': '#kungFuPandaModal',
-        'avengers endgame': '#ae'
+        'avengers endgame': '#aeModal',
+        'dragon ball super hero': '#dbshModal' // Added Dragon Ball Super Hero
     };
     if (modals[searchQuery]) {
         $(modals[searchQuery]).modal('show');
