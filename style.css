@@ -47,13 +47,13 @@ body {
 }
 
 .text-brand {
-    padding: 25px;
+    padding: 15px;
     font-size: 1.2rem;
     /* Adjusted font size */
 }
 
 .text {
-    padding: 20px;
+    padding: 15px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -467,4 +467,4 @@ nav {
         opacity: 1;
     }
 }
-
+ 
