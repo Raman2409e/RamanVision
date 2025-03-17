@@ -31,6 +31,7 @@ body {
     overflow-y: hidden;
     /* Allows scrolling if content overflows */
     width: 16.66%;
+    
 }
 
 .text-brand i {
@@ -359,9 +360,9 @@ nav {
     color: var(--text-color);
     border: none;
 }
-
-
-
+.navbar-light .navbar-toggler-icon {
+    background: url(https://img.icons8.com/external-gradak-royyan-wijaya/24/FFFFFF/external-hamburger-menu-basic-interface-iii-gradak-royyan-wijaya.png");
+}
 /* Card styles for suggestions */
 .card {
     background-color: var(--background);
